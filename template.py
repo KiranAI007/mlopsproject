@@ -30,11 +30,11 @@ list_of_files = [
 ]
 
 for filepath in list_of_files:
-    # create the file path
+    # making the file path with the system compatible like linux, windows etc...
     filepath = Path(filepath)
-    # split the filedir and file from the path
+    # split the filedir and file from the path. filedir is the directory/ folder that we want to create.
     filedir, filename = os.path.split(filepath)
-    # if the filedir is not empty the create a directory
+    # if the filedir is not empty then create a directory
     if filedir != "":
         # make the directory
         os.makedirs(filedir, exist_ok=True)
